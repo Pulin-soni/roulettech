@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-00g0--&fpz7cxo*=ty(j)wbr$7jb2elin8xx(ky+%a5uv(wc1j
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
-    'http://pulintrial.s3-website-us-west-1.amazonaws.com',
+    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
+    'pulintrial.s3-website-us-west-1.amazonaws.com',
 ]
 
 

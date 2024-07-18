@@ -26,14 +26,15 @@ SECRET_KEY = 'django-insecure-00g0--&fpz7cxo*=ty(j)wbr$7jb2elin8xx(ky+%a5uv(wc1j
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
-    'pulintrial.s3-website-us-west-1.amazonaws.com',
+    'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
+    'http://pulintrial.s3-website-us-west-1.amazonaws.com',
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,12 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
+    'api',
     'rest_framework',
-    'corsheaders',
-
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,7 +55,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'notepad.urls'

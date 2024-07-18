@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-00g0--&fpz7cxo*=ty(j)wbr$7jb2elin8xx(ky+%a5uv(wc1j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 'pulintrial.s3-website-us-west-1.amazonaws.com']
+ALLOWED_HOSTS = [
+    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
+    'pulintrial.s3-website-us-west-1.amazonaws.com',
+]
 
 
 # Application definition
@@ -135,9 +138,31 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://pulintrial.s3-website-us-west-1.amazonaws.com',
+    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
-    'http://pulintrial.s3-website-us-west-1.amazonaws.com'
+    'http://pulintrial.s3-website-us-west-1.amazonaws.com',
 ]

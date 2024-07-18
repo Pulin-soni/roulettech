@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     'http://pulintrial.s3-website-us-west-1.amazonaws.com',
-    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
+    'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
 ]
 
 CORS_ALLOW_METHODS = [
@@ -163,6 +163,6 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
+    'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
     'http://pulintrial.s3-website-us-west-1.amazonaws.com',
 ]

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-00g0--&fpz7cxo*=ty(j)wbr$7jb2elin8xx(ky+%a5uv(wc1j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 'pulintrial.s3-website-us-west-1.amazonaws.com']
 
 
 # Application definition
@@ -130,14 +130,14 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static',
-    BASE_DIR / 'frontend/build'
-]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
+    'http://pulintrial.s3-website-us-west-1.amazonaws.com'
+]

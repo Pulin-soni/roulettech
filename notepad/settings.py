@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'ec2-54-219-159-246.us-west-1.compute.amazonaws.com', 
     'pulintrial.s3-website-us-west-1.amazonaws.com',
+    'd1wfb48p4wfvw.cloudfront.net',
+    'd3tylup4da2er4.cloudfront.net',
 ]
 
 
@@ -140,6 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://pulintrial.s3-website-us-west-1.amazonaws.com',
     'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
+    'https://d1wfb48p4wfvw.cloudfront.net',
+    'https://d3tylup4da2er4.cloudfront.net',
 ]
 
 CORS_ALLOW_METHODS = [
@@ -164,4 +168,6 @@ CORS_ALLOW_HEADERS = [
 CSRF_TRUSTED_ORIGINS = [
     'http://ec2-54-219-159-246.us-west-1.compute.amazonaws.com',
     'http://pulintrial.s3-website-us-west-1.amazonaws.com',
+    'https://d1wfb48p4wfvw.cloudfront.net',
+    'https://d3tylup4da2er4.cloudfront.net',
 ]
